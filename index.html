@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Residential Builders | Auckland Renovations & New Builds</title>
+  <meta name="description" content="Central Residential Builders is an Auckland building company specialising in renovations and new builds. Licensed Building Practitioners with 30 years of combined on-site experience." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#211F1C', ink: '#2B2724', cream: '#F4EFE6', concrete: '#E2DCD0',
+            rust: '#B0532B', rustdark: '#8E4222', stone: '#6E665B',
+          },
+          fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #F4EFE6; }
+    .kicker { letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: 0.08s; }
+    .reveal[data-delay="2"] { transition-delay: 0.16s; }
+    .reveal[data-delay="3"] { transition-delay: 0.24s; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+    .img-zoom { overflow: hidden; }
+    .img-zoom img { transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+    .img-zoom:hover img { transform: scale(1.05); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: currentColor; transition: width .35s ease; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+
+<body class="font-sans text-ink antialiased selection:bg-rust selection:text-cream">
+
+  <!-- ===== NAV ===== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="relative flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group shrink-0">
+          <img src="assets/logo.png" alt="Central Residential Builders" class="h-12 lg:h-14 w-auto" />
+        </a>
+        <nav class="hidden md:flex items-center gap-9 text-sm font-medium absolute left-1/2 -translate-x-1/2">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="work.html" class="nav-link">Work</a>
+          <a href="process.html" class="nav-link">Process</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <a href="contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full border border-current/30 px-5 py-2.5 text-xs font-semibold tracking-wide transition-all hover:bg-rust hover:text-cream hover:border-rust">Start a project</a>
+        <a href="contact.html" class="md:hidden text-xs font-semibold tracking-wide rounded-full border px-4 py-2">Enquire</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" class="relative min-h-[100svh] flex items-end overflow-hidden">
+    <div class="absolute inset-0 img-zoom">
+      <img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/377a6008-810b-4bab-a72c-c05eee414d8e/residential-builders-reonation-experts-auckland.jpg?format=2500w" alt="A Central Residential Builders renovation in Auckland" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/45 to-charcoal/35"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 w-full pb-16 lg:pb-24">
+      <p class="kicker text-cream/80 reveal in">Auckland &middot; Established 2017</p>
+      <h1 class="reveal in mt-5 font-display text-cream text-5xl sm:text-6xl lg:text-7xl leading-[0.98] max-w-4xl">Older homes, brought<span class="italic text-rust/95"> back to life.</span></h1>
+      <p class="reveal in mt-7 max-w-xl text-cream/85 text-lg leading-relaxed">Renovation experts known for quality workmanship. A full-service Auckland building company taking pride in bringing character homes up to modern standards.</p>
+      <div class="reveal in mt-9 flex flex-wrap items-center gap-4">
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-rust px-7 py-3.5 text-sm font-semibold text-cream tracking-wide transition-all hover:bg-rustdark">Talk to us about your build</a>
+        <a href="work.html" class="inline-flex items-center gap-2 rounded-full border border-cream/40 px-7 py-3.5 text-sm font-semibold text-cream tracking-wide transition-all hover:bg-cream hover:text-charcoal">See our work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STAT BAND ===== -->
+  <section class="bg-charcoal text-cream">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 divide-y divide-cream/10 lg:divide-y-0 lg:divide-x">
+        <div class="reveal py-10 lg:py-14 lg:pr-10"><p class="font-display text-5xl">2017</p><p class="mt-2 text-sm text-cream/60">Founded in South Auckland</p></div>
+        <div class="reveal py-10 lg:py-14 lg:px-10" data-delay="1"><p class="font-display text-5xl">30 yrs</p><p class="mt-2 text-sm text-cream/60">Combined on-site experience</p></div>
+        <div class="reveal py-10 lg:py-14 lg:px-10" data-delay="2"><p class="font-display text-5xl">LBP</p><p class="mt-2 text-sm text-cream/60">Licensed Building Practitioners</p></div>
+        <div class="reveal py-10 lg:py-14 lg:pl-10" data-delay="3"><p class="font-display text-5xl">6 steps</p><p class="mt-2 text-sm text-cream/60">A clear process, every project</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="py-24 lg:py-36">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-3 reveal"><p class="kicker text-rust">Who we are</p></div>
+      <div class="lg:col-span-9 reveal" data-delay="1">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl">We take pride and pleasure in giving older homes a whole new life. Quality workmanship, from the first concept costing to the final clean.</h2>
+        <p class="mt-8 max-w-2xl text-stone text-lg leading-relaxed">Central Residential Builders is an Auckland-based, full-service building company specialising in renovations and new builds. Easy to work with, knowledgeable on site, and known for a tidy, safe workspace from start to finish.</p>
+        <a href="about.html" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-rust hover:text-rustdark transition-colors">More about us &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK TEASER ===== -->
+  <section class="pb-24 lg:pb-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+        <div class="reveal"><p class="kicker text-rust">Selected work</p><h2 class="mt-4 font-display text-4xl lg:text-5xl">Recent projects across Auckland.</h2></div>
+        <a href="work.html" class="reveal inline-flex items-center gap-2 text-sm font-semibold text-rust hover:text-rustdark transition-colors" data-delay="1">View all projects &rarr;</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6">
+        <a href="work.html" class="reveal img-zoom md:col-span-7 rounded-2xl block"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/24362edb-18aa-4a2c-b66f-7524bf6852f7/Onehunga-villa-renovations-builder-auckland-9.jpg?format=1500w" alt="Onehunga villa renovation" class="w-full h-72 md:h-[28rem] object-cover" /></a>
+        <a href="work.html" class="reveal img-zoom md:col-span-5 rounded-2xl block" data-delay="1"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/214d39c2-0364-4ed0-8a36-140e6e6a3e6c/New-build-auckland-builder-2.jpg?format=1500w" alt="New build in Auckland" class="w-full h-72 md:h-[28rem] object-cover" /></a>
+        <a href="work.html" class="reveal img-zoom md:col-span-5 rounded-2xl block" data-delay="1"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/807d9a3c-917b-430a-b2bc-cee5b9d2ce86/Onehunga-villa-renovations-builder-auckland-4.jpg?format=1500w" alt="Onehunga villa interior renovation" class="w-full h-72 md:h-96 object-cover" /></a>
+        <a href="work.html" class="reveal img-zoom md:col-span-7 rounded-2xl block" data-delay="2"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/f8bd682d-36c1-45a3-a0a3-6a2e4ad5f628/Onehunga-villa-renovations-builder-auckland-8.jpg?format=1500w" alt="Completed villa renovation exterior" class="w-full h-72 md:h-96 object-cover" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="bg-charcoal text-cream py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="reveal max-w-2xl">
+        <p class="kicker text-rust">What we do</p>
+        <h2 class="mt-4 font-display text-4xl lg:text-5xl">Three ways we build.</h2>
+        <p class="mt-5 text-cream/70 leading-relaxed">From a renovation that reworks how you live to a new home built from the ground up, every project is run the same way. Carefully, and to budget.</p>
+      </div>
+      <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <article class="reveal group rounded-2xl overflow-hidden bg-ink/40 border border-cream/10">
+          <div class="img-zoom h-56"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/cc4be501-0ac7-4e0c-8433-6bef8640ddad/Renovations+and+alterations+cody+webby.jpg?format=1000w" alt="Renovations and alterations" class="w-full h-full object-cover" /></div>
+          <div class="p-8"><h3 class="font-display text-2xl">Renovations &amp; alterations</h3><p class="mt-3 text-cream/70 leading-relaxed text-[0.95rem]">Bringing older and character homes up to modern standards without losing what makes them special.</p></div>
+        </article>
+        <article class="reveal group rounded-2xl overflow-hidden bg-ink/40 border border-cream/10" data-delay="1">
+          <div class="img-zoom h-56"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/214d39c2-0364-4ed0-8a36-140e6e6a3e6c/New-build-auckland-builder-2.jpg?format=1000w" alt="New builds" class="w-full h-full object-cover" /></div>
+          <div class="p-8"><h3 class="font-display text-2xl">New builds</h3><p class="mt-3 text-cream/70 leading-relaxed text-[0.95rem]">New homes built from the ground up, managed end to end by Licensed Building Practitioners.</p></div>
+        </article>
+        <article class="reveal group rounded-2xl overflow-hidden bg-ink/40 border border-cream/10" data-delay="2">
+          <div class="img-zoom h-56"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/64dc90e2-fff0-4da7-a195-49a0cdc8b215/preliminary-costings.jpg?format=1000w" alt="Preliminary costings" class="w-full h-full object-cover" /></div>
+          <div class="p-8"><h3 class="font-display text-2xl">Preliminary costings</h3><p class="mt-3 text-cream/70 leading-relaxed text-[0.95rem]">Costing based on your concept plans, so you know where you stand before the work begins.</p></div>
+        </article>
+      </div>
+      <a href="about.html" class="reveal mt-10 inline-flex items-center gap-2 text-sm font-semibold text-rust hover:text-cream transition-colors">See the full picture &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="bg-cream">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32">
+      <div class="reveal max-w-2xl mb-14"><p class="kicker text-rust">Kind words</p><h2 class="mt-4 font-display text-4xl lg:text-5xl">What homeowners tell us.</h2></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="reveal rounded-2xl bg-white/70 border border-concrete p-8 flex flex-col"><p class="text-rust text-2xl leading-none">&ldquo;</p><blockquote class="mt-3 font-display text-xl leading-snug">An exceptional level of communication, time management and quality.</blockquote><figcaption class="mt-6 text-sm text-stone">Matt &amp; Cass &middot; Beachlands</figcaption></figure>
+        <figure class="reveal rounded-2xl bg-white/70 border border-concrete p-8 flex flex-col" data-delay="1"><p class="text-rust text-2xl leading-none">&ldquo;</p><blockquote class="mt-3 font-display text-xl leading-snug">Always polite, tidy and fun to have around the house.</blockquote><figcaption class="mt-6 text-sm text-stone">Stephanie Stone &middot; Mt Roskill</figcaption></figure>
+        <figure class="reveal rounded-2xl bg-white/70 border border-concrete p-8 flex flex-col" data-delay="2"><p class="text-rust text-2xl leading-none">&ldquo;</p><blockquote class="mt-3 font-display text-xl leading-snug">Completed our home not only on time, but on budget.</blockquote><figcaption class="mt-6 text-sm text-stone">Lisa &amp; Steve &middot; Mt Smart</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="relative overflow-hidden">
+    <img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/48649065-c559-4c2f-aac9-9036f6f03a94/Onehunga-villa-renovations-builder-auckland-7.jpg?format=2000w" alt="Completed Onehunga renovation" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-charcoal/85"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32 text-center text-cream">
+      <h2 class="reveal font-display text-4xl lg:text-6xl leading-[1.02] max-w-3xl mx-auto">Let's talk about your home.</h2>
+      <p class="reveal mt-6 max-w-xl mx-auto text-cream/75 text-lg" data-delay="1">Tell us a little about what you are planning, and we will arrange a time to visit and talk it through.</p>
+      <a href="contact.html" class="reveal mt-9 inline-flex items-center gap-2 rounded-full bg-rust px-8 py-4 text-sm font-semibold tracking-wide transition-all hover:bg-rustdark" data-delay="2">Start a project</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-ink text-cream/70">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3"><span class="font-display text-lg text-cream">Central<span class="text-rust">.</span></span><span class="kicker text-[0.6rem]">Residential Builders</span></div>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed">Renovation experts known for quality workmanship. Auckland renovations and new builds by Licensed Building Practitioners.</p>
+        </div>
+        <div>
+          <p class="kicker text-cream/40 text-[0.62rem]">Pages</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-rust transition-colors">About</a></li>
+            <li><a href="work.html" class="hover:text-rust transition-colors">Work</a></li>
+            <li><a href="process.html" class="hover:text-rust transition-colors">Process</a></li>
+            <li><a href="contact.html" class="hover:text-rust transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="kicker text-cream/40 text-[0.62rem]">Get in touch</p>
+          <address class="mt-4 not-italic text-sm leading-relaxed">Central Residential Builders Ltd<br />44a Claude Road, Hillpark<br />Auckland 2102<br /><a href="tel:0210566250" class="hover:text-rust transition-colors">021 056 6250</a> (Cody)<br /><a href="mailto:info@centralresidential.co.nz" class="hover:text-rust transition-colors">info@centralresidential.co.nz</a></address>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <p>&copy; <span id="year"></span> Central Residential Builders Ltd &middot; Licensed Building Practitioners</p>
+        <p>Auckland, New Zealand</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal:not(.in)').forEach((el) => io.observe(el));
+    const nav = document.getElementById('nav');
+    const onScroll = () => { if (window.scrollY > 40) { nav.classList.add('bg-charcoal/95','backdrop-blur','shadow-lg'); } else { nav.classList.remove('bg-charcoal/95','backdrop-blur','shadow-lg'); } };
+    nav.classList.add('text-cream');
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>

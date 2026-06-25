@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Central Residential Builders</title>
+  <meta name="description" content="Central Residential Builders is an Auckland full-service building company specialising in renovations and new builds. Founded in 2017 by Cody Webby and Ryan Bonniface." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { charcoal: '#211F1C', ink: '#2B2724', cream: '#F4EFE6', concrete: '#E2DCD0', rust: '#B0532B', rustdark: '#8E4222', stone: '#6E665B' },
+      fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+    } } };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; } body { background: #F4EFE6; }
+    .kicker { letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: 0.08s; } .reveal[data-delay="2"] { transition-delay: 0.16s; } .reveal[data-delay="3"] { transition-delay: 0.24s; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+    .img-zoom { overflow: hidden; } .img-zoom img { transition: transform 1.2s cubic-bezier(.2,.7,.2,1); } .img-zoom:hover img { transform: scale(1.05); }
+    .nav-link { position: relative; } .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: currentColor; transition: width .35s ease; } .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+
+<body class="font-sans text-ink antialiased selection:bg-rust selection:text-cream">
+
+  <!-- ===== NAV ===== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="relative flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group shrink-0">
+          <img src="assets/logo.png" alt="Central Residential Builders" class="h-12 lg:h-14 w-auto" />
+        </a>
+        <nav class="hidden md:flex items-center gap-9 text-sm font-medium absolute left-1/2 -translate-x-1/2">
+          <a href="about.html" class="nav-link text-rust">About</a>
+          <a href="work.html" class="nav-link">Work</a>
+          <a href="process.html" class="nav-link">Process</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <a href="contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full border border-current/30 px-5 py-2.5 text-xs font-semibold tracking-wide transition-all hover:bg-rust hover:text-cream hover:border-rust">Start a project</a>
+        <a href="contact.html" class="md:hidden text-xs font-semibold tracking-wide rounded-full border px-4 py-2">Enquire</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="relative h-[64vh] min-h-[440px] flex items-end overflow-hidden">
+    <img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/cc4be501-0ac7-4e0c-8433-6bef8640ddad/Renovations+and+alterations+cody+webby.jpg?format=2000w" alt="Central Residential Builders on site" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/45 to-charcoal/40"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 w-full pb-14 lg:pb-20">
+      <p class="kicker text-cream/80 reveal in">About us</p>
+      <h1 class="reveal in mt-4 font-display text-cream text-5xl sm:text-6xl lg:text-7xl leading-[0.98]">Builders you can trust.</h1>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE ARE (image + text) ===== -->
+  <section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-16">
+      <div class="reveal relative shadow-2xl shadow-rust/30 rounded-2xl overflow-hidden shrink-0">
+        <img class="max-w-md w-full object-cover rounded-2xl h-[30rem]" src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/cc4be501-0ac7-4e0c-8433-6bef8640ddad/Renovations+and+alterations+cody+webby.jpg?format=1000w" alt="Central Residential Builders on site" />
+        <div class="flex items-center gap-3 max-w-[18rem] absolute bottom-8 left-8 bg-cream p-4 rounded-xl shadow-lg">
+          <div class="flex items-center justify-center size-11 rounded-full bg-rust text-cream font-display text-lg shrink-0">30</div>
+          <p class="text-sm font-medium text-ink leading-snug">Years of combined on-site experience</p>
+        </div>
+      </div>
+      <div class="reveal text-stone max-w-lg" data-delay="1">
+        <p class="kicker text-rust">Who we are</p>
+        <h2 class="mt-3 font-display text-4xl lg:text-5xl text-ink leading-tight">A team you can build with.</h2>
+        <div class="mt-5 w-24 h-[3px] rounded-full bg-gradient-to-r from-rust to-concrete"></div>
+        <p class="mt-8 text-lg leading-relaxed">Central Residential Builders is an Auckland-based full-service building company specialising in renovations and new builds.</p>
+        <p class="mt-4 text-lg leading-relaxed">Our service focuses on creating strong, trusting relationships, identifying what you need and finding a solution to fit your budget.</p>
+        <p class="mt-4 text-lg leading-relaxed">Together, the team brings decades of building experience and project management to your build.</p>
+        <a href="work.html" class="inline-flex items-center gap-2 mt-8 hover:-translate-y-0.5 transition-all bg-gradient-to-r from-rust to-rustdark py-3 px-8 rounded-full text-cream text-sm font-semibold">
+          <span>See our work</span>
+          <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.53 6.53a.75.75 0 0 0 0-1.06L7.757.697a.75.75 0 1 0-1.06 1.06L10.939 6l-4.242 4.243a.75.75 0 0 0 1.06 1.06zM0 6v.75h12v-1.5H0z" fill="currentColor" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDERS ===== -->
+  <section class="bg-charcoal text-cream py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+      <div class="reveal img-zoom rounded-2xl">
+        <img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/f8bd682d-36c1-45a3-a0a3-6a2e4ad5f628/Onehunga-villa-renovations-builder-auckland-8.jpg?format=1500w" alt="A completed Central Residential renovation" class="w-full h-[26rem] lg:h-[34rem] object-cover" />
+      </div>
+      <div class="reveal" data-delay="1">
+        <p class="kicker text-rust">The builders</p>
+        <h2 class="mt-4 font-display text-4xl lg:text-5xl leading-tight">Cody and Ryan, building since 2017.</h2>
+        <p class="mt-6 text-cream/75 text-lg leading-relaxed">Cody Webby and Ryan Bonniface founded Central Residential Builders in 2017, and together they have 30 years of on-site building experience.</p>
+        <div class="mt-10 grid grid-cols-2 gap-8 max-w-sm">
+          <div><p class="font-display text-4xl">2017</p><p class="mt-1 text-sm text-cream/55">Founded</p></div>
+          <div><p class="font-display text-4xl">30 yrs</p><p class="mt-1 text-sm text-cream/55">On-site experience</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE DO ===== -->
+  <section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="reveal max-w-2xl mb-14"><p class="kicker text-rust">What we do</p><h2 class="mt-4 font-display text-4xl lg:text-5xl">Renovation, new builds, and clear costing.</h2></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="reveal rounded-2xl overflow-hidden border border-concrete bg-white/50">
+          <div class="img-zoom h-56"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/807d9a3c-917b-430a-b2bc-cee5b9d2ce86/Onehunga-villa-renovations-builder-auckland-4.jpg?format=1000w" alt="Renovations and alterations" class="w-full h-full object-cover" /></div>
+          <div class="p-8"><h3 class="font-display text-2xl">Renovations &amp; alterations</h3><p class="mt-3 text-stone leading-relaxed text-[0.95rem]">Central Residential's carpenters have specialised in renovation throughout their building careers.</p></div>
+        </article>
+        <article class="reveal rounded-2xl overflow-hidden border border-concrete bg-white/50" data-delay="1">
+          <div class="img-zoom h-56"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/214d39c2-0364-4ed0-8a36-140e6e6a3e6c/New-build-auckland-builder-2.jpg?format=1000w" alt="New builds" class="w-full h-full object-cover" /></div>
+          <div class="p-8"><h3 class="font-display text-2xl">New builds</h3><p class="mt-3 text-stone leading-relaxed text-[0.95rem]">We enjoy working on new builds, using the latest materials and techniques to create beautiful modern homes.</p></div>
+        </article>
+        <article class="reveal rounded-2xl overflow-hidden border border-concrete bg-white/50" data-delay="2">
+          <div class="img-zoom h-56"><img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/64dc90e2-fff0-4da7-a195-49a0cdc8b215/preliminary-costings.jpg?format=1000w" alt="Preliminary costing and fixed price" class="w-full h-full object-cover" /></div>
+          <div class="p-8"><h3 class="font-display text-2xl">Preliminary costing &amp; fixed price</h3><p class="mt-3 text-stone leading-relaxed text-[0.95rem]">We work through your concept plans and provide an estimate before the build.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY WORK WITH US (feature grid) ===== -->
+  <section class="bg-cream border-t border-concrete py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="reveal flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+        <div class="max-w-2xl">
+          <p class="kicker text-rust">Why work with us</p>
+          <h2 class="mt-4 font-display text-4xl lg:text-5xl">The things that make a build go well.</h2>
+          <p class="mt-4 text-stone text-lg max-w-lg">Six standards we hold on every project, from the first costing to the final clean.</p>
+        </div>
+        <img src="https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/bbe74023-291e-4cad-a514-354a976a259f/Licensed+Building+Practitioner.png" alt="Licensed Building Practitioner" class="w-32 lg:w-40 shrink-0 self-center" />
+      </div>
+
+      <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-16 lg:gap-y-14 pt-16">
+        <div class="absolute size-[520px] -top-40 left-1/2 -translate-x-1/2 rounded-full blur-[260px] -z-10 bg-rust/10"></div>
+
+        <div class="reveal">
+          <div class="size-11 p-2.5 bg-white border border-concrete rounded-lg text-rust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          </div>
+          <div class="mt-5 space-y-2"><h3 class="text-lg font-semibold text-ink">Preliminary costing</h3><p class="text-[0.95rem] text-stone leading-relaxed">Costing based off your concept plans, before the build begins.</p></div>
+        </div>
+
+        <div class="reveal" data-delay="1">
+          <div class="size-11 p-2.5 bg-white border border-concrete rounded-lg text-rust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="mt-5 space-y-2"><h3 class="text-lg font-semibold text-ink">Easy to work with</h3><p class="text-[0.95rem] text-stone leading-relaxed">Knowledgeable staff who keep things straightforward.</p></div>
+        </div>
+
+        <div class="reveal" data-delay="2">
+          <div class="size-11 p-2.5 bg-white border border-concrete rounded-lg text-rust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+          </div>
+          <div class="mt-5 space-y-2"><h3 class="text-lg font-semibold text-ink">Quality project management</h3><p class="text-[0.95rem] text-stone leading-relaxed">One team managing trades, timeline and quality throughout.</p></div>
+        </div>
+
+        <div class="reveal">
+          <div class="size-11 p-2.5 bg-white border border-concrete rounded-lg text-rust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></svg>
+          </div>
+          <div class="mt-5 space-y-2"><h3 class="text-lg font-semibold text-ink">A tidy and safe work site</h3><p class="text-[0.95rem] text-stone leading-relaxed">A clean, safe site you are comfortable having at home.</p></div>
+        </div>
+
+        <div class="reveal" data-delay="1">
+          <div class="size-11 p-2.5 bg-white border border-concrete rounded-lg text-rust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </div>
+          <div class="mt-5 space-y-2"><h3 class="text-lg font-semibold text-ink">Expert guidance &amp; service</h3><p class="text-[0.95rem] text-stone leading-relaxed">Clear advice and communication at every stage.</p></div>
+        </div>
+
+        <div class="reveal" data-delay="2">
+          <div class="size-11 p-2.5 bg-white border border-concrete rounded-lg text-rust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="mt-5 space-y-2"><h3 class="text-lg font-semibold text-ink">Licensed Building Practitioners</h3><p class="text-[0.95rem] text-stone leading-relaxed">Qualified, accountable and compliant building work.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KIND WORDS (animated testimonials) ===== -->
+  <section id="testimonials" class="py-24 lg:py-32 overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:gap-24">
+
+        <!-- Left: heading + dots -->
+        <div class="reveal flex flex-col justify-center">
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-rust/10 text-rust w-fit">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Kind words</span>
+            </div>
+            <h2 class="font-display text-4xl lg:text-5xl leading-tight">What homeowners tell us.</h2>
+            <p class="max-w-[600px] text-stone text-lg leading-relaxed">Real words from Auckland homeowners we have built for.</p>
+            <div class="flex items-center gap-3 pt-4">
+              <button data-i="0" class="tdot h-2.5 rounded-full transition-all duration-300 w-10 bg-rust" aria-label="View review 1"></button>
+              <button data-i="1" class="tdot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-stone/30" aria-label="View review 2"></button>
+              <button data-i="2" class="tdot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-stone/30" aria-label="View review 3"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: rotating cards -->
+        <div class="reveal relative h-full min-h-[340px] md:min-h-[400px] md:mr-10" data-delay="1">
+          <!-- Card 1 -->
+          <div class="tcard absolute inset-0 transition-all duration-500" data-i="0" style="opacity:1;transform:translateX(0) scale(1);z-index:10;">
+            <div class="bg-white border border-concrete shadow-lg rounded-xl p-8 h-full flex flex-col">
+              <div class="mb-6 flex gap-1.5 text-rust">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="relative mb-6 flex-1">
+                <span class="absolute -top-6 -left-1 font-display text-7xl leading-none text-rust/15 select-none">&ldquo;</span>
+                <p class="relative z-10 text-lg font-medium leading-relaxed text-ink">An exceptional level of communication, time management and quality.</p>
+              </div>
+              <div class="h-px w-full bg-concrete my-4"></div>
+              <div class="flex items-center gap-4">
+                <div class="h-12 w-12 rounded-full bg-rust text-cream border border-concrete flex items-center justify-center font-display text-lg shrink-0">M</div>
+                <div><h3 class="font-semibold text-ink">Matt &amp; Cass</h3><p class="text-sm text-stone">Homeowners, Beachlands</p></div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="tcard absolute inset-0 transition-all duration-500" data-i="1" style="opacity:0;transform:translateX(100px) scale(.9);z-index:0;">
+            <div class="bg-white border border-concrete shadow-lg rounded-xl p-8 h-full flex flex-col">
+              <div class="mb-6 flex gap-1.5 text-rust">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="relative mb-6 flex-1">
+                <span class="absolute -top-6 -left-1 font-display text-7xl leading-none text-rust/15 select-none">&ldquo;</span>
+                <p class="relative z-10 text-lg font-medium leading-relaxed text-ink">Always polite, tidy and fun to have around the house.</p>
+              </div>
+              <div class="h-px w-full bg-concrete my-4"></div>
+              <div class="flex items-center gap-4">
+                <div class="h-12 w-12 rounded-full bg-rust text-cream border border-concrete flex items-center justify-center font-display text-lg shrink-0">S</div>
+                <div><h3 class="font-semibold text-ink">Stephanie Stone</h3><p class="text-sm text-stone">Homeowner, Mt Roskill</p></div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="tcard absolute inset-0 transition-all duration-500" data-i="2" style="opacity:0;transform:translateX(100px) scale(.9);z-index:0;">
+            <div class="bg-white border border-concrete shadow-lg rounded-xl p-8 h-full flex flex-col">
+              <div class="mb-6 flex gap-1.5 text-rust">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="relative mb-6 flex-1">
+                <span class="absolute -top-6 -left-1 font-display text-7xl leading-none text-rust/15 select-none">&ldquo;</span>
+                <p class="relative z-10 text-lg font-medium leading-relaxed text-ink">Completed our home not only on time, but on budget.</p>
+              </div>
+              <div class="h-px w-full bg-concrete my-4"></div>
+              <div class="flex items-center gap-4">
+                <div class="h-12 w-12 rounded-full bg-rust text-cream border border-concrete flex items-center justify-center font-display text-lg shrink-0">L</div>
+                <div><h3 class="font-semibold text-ink">Lisa &amp; Steve</h3><p class="text-sm text-stone">Homeowners, Mt Smart</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative -->
+          <div class="absolute -bottom-6 -left-6 h-24 w-24 rounded-xl bg-rust/5 -z-10"></div>
+          <div class="absolute -top-6 -right-6 h-24 w-24 rounded-xl bg-rust/5 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="bg-charcoal text-cream">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-20 lg:py-28 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+      <h2 class="reveal font-display text-4xl lg:text-5xl max-w-xl">Ready to discuss your project?</h2>
+      <a href="contact.html" class="reveal inline-flex items-center gap-2 rounded-full bg-rust px-8 py-4 text-sm font-semibold tracking-wide transition-all hover:bg-rustdark" data-delay="1">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-ink text-cream/70">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3"><span class="font-display text-lg text-cream">Central<span class="text-rust">.</span></span><span class="kicker text-[0.6rem]">Residential Builders</span></div>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed">Renovation experts known for quality workmanship. Auckland renovations and new builds by Licensed Building Practitioners.</p>
+        </div>
+        <div>
+          <p class="kicker text-cream/40 text-[0.62rem]">Pages</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-rust transition-colors">About</a></li>
+            <li><a href="work.html" class="hover:text-rust transition-colors">Work</a></li>
+            <li><a href="process.html" class="hover:text-rust transition-colors">Process</a></li>
+            <li><a href="contact.html" class="hover:text-rust transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="kicker text-cream/40 text-[0.62rem]">Get in touch</p>
+          <address class="mt-4 not-italic text-sm leading-relaxed">Central Residential Builders Ltd<br />44a Claude Road, Hillpark<br />Auckland 2102<br /><a href="tel:0210566250" class="hover:text-rust transition-colors">021 056 6250</a> (Cody)<br /><a href="mailto:info@centralresidential.co.nz" class="hover:text-rust transition-colors">info@centralresidential.co.nz</a></address>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <p>&copy; <span id="year"></span> Central Residential Builders Ltd &middot; Licensed Building Practitioners</p>
+        <p>Auckland, New Zealand</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal:not(.in)').forEach((el) => io.observe(el));
+    const nav = document.getElementById('nav');
+    const onScroll = () => { if (window.scrollY > 40) { nav.classList.add('bg-charcoal/95','backdrop-blur','shadow-lg'); } else { nav.classList.remove('bg-charcoal/95','backdrop-blur','shadow-lg'); } };
+    nav.classList.add('text-cream');
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Animated testimonials (auto-rotate + dot nav)
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.tcard'));
+      const dots = Array.from(document.querySelectorAll('.tdot'));
+      if (cards.length < 2) return;
+      let idx = 0, timer;
+      const show = (n) => {
+        idx = n;
+        cards.forEach((c, i) => {
+          const active = i === n;
+          c.style.opacity = active ? '1' : '0';
+          c.style.transform = active ? 'translateX(0) scale(1)' : 'translateX(100px) scale(.9)';
+          c.style.zIndex = active ? '10' : '0';
+        });
+        dots.forEach((d, i) => {
+          d.classList.toggle('w-10', i === n);
+          d.classList.toggle('bg-rust', i === n);
+          d.classList.toggle('w-2.5', i !== n);
+          d.classList.toggle('bg-stone/30', i !== n);
+        });
+      };
+      const start = () => { timer = setInterval(() => show((idx + 1) % cards.length), 6000); };
+      const reset = () => { clearInterval(timer); start(); };
+      dots.forEach((d) => d.addEventListener('click', () => { show(+d.dataset.i); reset(); }));
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) start();
+    })();
+  </script>
+</body>
+</html>
