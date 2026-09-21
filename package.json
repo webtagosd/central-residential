@@ -1,0 +1,12 @@
+{
+  "name": "central-residential",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check-wt-tags": "node scripts/check-wt-tags.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.0"
+  }
+}

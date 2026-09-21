@@ -1,0 +1,257 @@
+{
+  "groups": [
+    {
+      "id": "site",
+      "label": "Site & SEO",
+      "fields": [
+        {
+          "key": "site.name",
+          "type": "text",
+          "label": "Business name",
+          "required": true
+        },
+        {
+          "key": "site.tagline",
+          "type": "text",
+          "label": "Tagline"
+        },
+        {
+          "key": "seo.title",
+          "type": "text",
+          "label": "Meta title"
+        },
+        {
+          "key": "seo.description",
+          "type": "longtext",
+          "label": "Meta description"
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "label": "Home — Hero",
+      "fields": [
+        {
+          "key": "hero.kicker",
+          "type": "text",
+          "label": "Kicker"
+        },
+        {
+          "key": "hero.headline",
+          "type": "text",
+          "label": "Headline",
+          "required": true
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "longtext",
+          "label": "Subtitle"
+        },
+        {
+          "key": "hero.ctaPrimary",
+          "type": "text",
+          "label": "Primary button"
+        },
+        {
+          "key": "hero.ctaSecondary",
+          "type": "text",
+          "label": "Secondary button"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "label": "Hero image"
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "label": "Home — Stats band",
+      "fields": [
+        {
+          "key": "stats.items",
+          "type": "list",
+          "label": "Stats (value + label)"
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "label": "Home — Intro",
+      "fields": [
+        {
+          "key": "intro.kicker",
+          "type": "text",
+          "label": "Kicker"
+        },
+        {
+          "key": "intro.heading",
+          "type": "longtext",
+          "label": "Heading"
+        },
+        {
+          "key": "intro.body",
+          "type": "longtext",
+          "label": "Body"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "fields": [
+        {
+          "key": "services.kicker",
+          "type": "text",
+          "label": "Kicker"
+        },
+        {
+          "key": "services.heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "key": "services.intro",
+          "type": "longtext",
+          "label": "Intro"
+        },
+        {
+          "key": "services.items",
+          "type": "list",
+          "label": "Services (title, description, image)"
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "label": "Reviews",
+      "fields": [
+        {
+          "key": "reviews.heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "key": "reviews.items",
+          "type": "list",
+          "label": "Reviews (quote, name, location)"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About page",
+      "fields": [
+        {
+          "key": "about.heroKicker",
+          "type": "text",
+          "label": "Hero kicker"
+        },
+        {
+          "key": "about.heroHeading",
+          "type": "text",
+          "label": "Hero heading"
+        },
+        {
+          "key": "about.whoHeading",
+          "type": "text",
+          "label": "Who-we-are heading"
+        },
+        {
+          "key": "about.whoBody",
+          "type": "longtext",
+          "label": "Who-we-are body"
+        },
+        {
+          "key": "about.foundersHeading",
+          "type": "text",
+          "label": "Founders heading"
+        },
+        {
+          "key": "about.foundersBody",
+          "type": "longtext",
+          "label": "Founders body"
+        },
+        {
+          "key": "about.features",
+          "type": "list",
+          "label": "Why-work-with-us (title, description)"
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": "Process page",
+      "fields": [
+        {
+          "key": "process.heroHeading",
+          "type": "text",
+          "label": "Hero heading"
+        },
+        {
+          "key": "process.intro",
+          "type": "longtext",
+          "label": "Intro"
+        },
+        {
+          "key": "process.steps",
+          "type": "list",
+          "label": "Steps (number, title, description)"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "label": "Work / Projects",
+      "fields": [
+        {
+          "key": "work.heroHeading",
+          "type": "text",
+          "label": "Hero heading"
+        },
+        {
+          "key": "work.intro",
+          "type": "longtext",
+          "label": "Intro"
+        },
+        {
+          "key": "work.projects",
+          "type": "list",
+          "label": "Projects (name, location, type, description)"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "fields": [
+        {
+          "key": "contact.heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "key": "contact.phone",
+          "type": "text",
+          "label": "Phone"
+        },
+        {
+          "key": "contact.phoneName",
+          "type": "text",
+          "label": "Phone contact name"
+        },
+        {
+          "key": "contact.email",
+          "type": "email",
+          "label": "Email"
+        },
+        {
+          "key": "contact.address",
+          "type": "text",
+          "label": "Address"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

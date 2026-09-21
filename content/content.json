@@ -1,0 +1,192 @@
+{
+  "seo": {
+    "title": "Central Residential Builders | Auckland Renovations & New Builds",
+    "description": "Central Residential Builders is an Auckland building company specialising in renovations and new builds. Licensed Building Practitioners with 30 years of combined on-site experience."
+  },
+  "hero": {
+    "image": "https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/377a6008-810b-4bab-a72c-c05eee414d8e/residential-builders-reonation-experts-auckland.jpg",
+    "kicker": "Auckland · Established 2017",
+    "headline": "Older homes, brought back to life.",
+    "subtitle": "Renovation experts known for quality workmanship. A full-service Auckland building company taking pride in bringing character homes up to modern standards.",
+    "ctaPrimary": "Talk to us about your build",
+    "ctaSecondary": "See our work"
+  },
+  "site": {
+    "name": "Central Residential Builders",
+    "tagline": "Renovation experts known for quality workmanship."
+  },
+  "work": {
+    "intro": "A selection of renovations, new builds and alterations completed across Auckland.",
+    "projects": [
+      {
+        "name": "Villa Renovation",
+        "type": "Renovation",
+        "location": "Onehunga, Auckland",
+        "description": "A character villa renovation, bringing an older Onehunga home up to modern standards while keeping its character intact."
+      },
+      {
+        "name": "New House Build",
+        "type": "New build",
+        "location": "Beachlands, Auckland",
+        "description": "A new home built from the ground up, using the latest materials and techniques to create a beautiful modern house."
+      },
+      {
+        "name": "1970s House Renovation",
+        "type": "Renovation",
+        "location": "Riverlea, Auckland",
+        "description": "A full renovation of a 1970s home, reworking the layout and finishes for modern family living."
+      },
+      {
+        "name": "Warehouse & Office Renovation",
+        "type": "Commercial",
+        "location": "Penrose, Auckland",
+        "description": "A commercial fit-out and renovation, modernising a warehouse and office space in Penrose."
+      }
+    ],
+    "heroHeading": "Recent projects."
+  },
+  "about": {
+    "whoBody": "Central Residential Builders is an Auckland-based full-service building company specialising in renovations and new builds. Our service focuses on creating strong, trusting relationships, identifying what you need and finding a solution to fit your budget. Together, the team brings decades of building experience and project management to your build.",
+    "features": [
+      {
+        "title": "Preliminary costing",
+        "description": "Costing based off your concept plans, before the build begins."
+      },
+      {
+        "title": "Easy to work with",
+        "description": "Knowledgeable staff who keep things straightforward."
+      },
+      {
+        "title": "Quality project management",
+        "description": "One team managing trades, timeline and quality throughout."
+      },
+      {
+        "title": "A tidy and safe work site",
+        "description": "A clean, safe site you are comfortable having at home."
+      },
+      {
+        "title": "Expert guidance & service",
+        "description": "Clear advice and communication at every stage."
+      },
+      {
+        "title": "Licensed Building Practitioners",
+        "description": "Qualified, accountable and compliant building work."
+      }
+    ],
+    "heroKicker": "About us",
+    "whoHeading": "A team you can build with.",
+    "heroHeading": "Builders you can trust.",
+    "foundersBody": "Cody Webby and Ryan Bonniface founded Central Residential Builders in 2017, and together they have 30 years of on-site building experience.",
+    "foundersHeading": "Cody and Ryan, building since 2017."
+  },
+  "intro": {
+    "body": "Central Residential Builders is an Auckland-based, full-service building company specialising in renovations and new builds. Easy to work with, knowledgeable on site, and known for a tidy, safe workspace from start to finish.",
+    "kicker": "Who we are",
+    "heading": "We take pride and pleasure in giving older homes a whole new life. Quality workmanship, from the first concept costing to the final clean."
+  },
+  "stats": {
+    "items": [
+      {
+        "label": "Founded in South Auckland",
+        "value": "2017"
+      },
+      {
+        "label": "Combined on-site experience",
+        "value": "30 yrs"
+      },
+      {
+        "label": "Licensed Building Practitioners",
+        "value": "LBP"
+      },
+      {
+        "label": "A clear process, every project",
+        "value": "6 steps"
+      }
+    ]
+  },
+  "contact": {
+    "email": "info@centralresidential.co.nz",
+    "phone": "021 056 6250",
+    "address": "44a Claude Road, Hillpark, Auckland 2102",
+    "heading": "Let's talk.",
+    "phoneName": "Cody Webby"
+  },
+  "process": {
+    "intro": "A smooth process is essential for an enjoyable building project. We make good communication a priority, so you feel up to date and informed on your project. We follow a six-step process on all our projects, so clients know where they are at and what to expect.",
+    "steps": [
+      {
+        "title": "Initial enquiry",
+        "number": "01",
+        "description": "We discuss your requirements over email or phone, and then arrange a suitable time to make a site visit."
+      },
+      {
+        "title": "Site visit & design",
+        "number": "02",
+        "description": "At the site visit we will talk through the design and specifications of the project."
+      },
+      {
+        "title": "Scope of works & quoting",
+        "number": "03",
+        "description": "Once we have a design and specifications in place, CRB will create a detailed Scope of Works that outlines all tasks to be undertaken. Based off this, we will also provide a quote."
+      },
+      {
+        "title": "Upon quote acceptance",
+        "number": "04",
+        "description": "Once the quote is accepted, we will create a Master Builders contract to suit the project, and a timeline Gantt chart for the carpentry, trades and services. The timeline will outline a flow path for the project and indicative start to finish dates."
+      },
+      {
+        "title": "Construction",
+        "number": "05",
+        "description": "We manage CRB-supplied trades and materials, the on-site carpentry, health and safety, client expectations, and on-site inspections and quality control throughout."
+      },
+      {
+        "title": "Hand-over & completion",
+        "number": "06",
+        "description": "Upon completion, we will provide all necessary documentation for CRB-supplied trades, materials and carpentry. We can also help with the CCC process."
+      }
+    ],
+    "heroHeading": "Six steps, start to finish."
+  },
+  "reviews": {
+    "items": [
+      {
+        "name": "Matt & Cass",
+        "quote": "An exceptional level of communication, time management and quality.",
+        "location": "Beachlands"
+      },
+      {
+        "name": "Stephanie Stone",
+        "quote": "Always polite, tidy and fun to have around the house.",
+        "location": "Mt Roskill"
+      },
+      {
+        "name": "Lisa & Steve",
+        "quote": "Completed our home not only on time, but on budget.",
+        "location": "Mt Smart"
+      }
+    ],
+    "heading": "What homeowners tell us."
+  },
+  "services": {
+    "intro": "From a renovation that reworks how you live to a new home built from the ground up, every project is run the same way. Carefully, and to budget.",
+    "items": [
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/cc4be501-0ac7-4e0c-8433-6bef8640ddad/Renovations+and+alterations+cody+webby.jpg",
+        "title": "Renovations & alterations",
+        "description": "Bringing older and character homes up to modern standards without losing what makes them special."
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/214d39c2-0364-4ed0-8a36-140e6e6a3e6c/New-build-auckland-builder-2.jpg",
+        "title": "New builds",
+        "description": "New homes built from the ground up, managed end to end by Licensed Building Practitioners."
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/6348e14c7757966fb9c9974c/64dc90e2-fff0-4da7-a195-49a0cdc8b215/preliminary-costings.jpg",
+        "title": "Preliminary costings",
+        "description": "Costing based on your concept plans, so you know where you stand before the work begins."
+      }
+    ],
+    "kicker": "What we do",
+    "heading": "Three ways we build."
+  }
+}
