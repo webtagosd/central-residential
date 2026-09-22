@@ -84,21 +84,49 @@
       </div>
 
       <div class="reveal" data-delay="1">
-        <form class="rounded-2xl bg-white border border-concrete p-8 lg:p-10" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-done').classList.remove('hidden');">
+        <form id="enquiry-form" class="rounded-2xl bg-white border border-concrete p-8 lg:p-10">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
           <div class="grid sm:grid-cols-2 gap-5">
-            <label class="block"><span class="text-xs font-semibold tracking-wide text-stone">Name</span><input type="text" required class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust" /></label>
-            <label class="block"><span class="text-xs font-semibold tracking-wide text-stone">Phone</span><input type="tel" class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust" /></label>
+            <label class="block"><span class="text-xs font-semibold tracking-wide text-stone">Name</span><input type="text" name="name" required class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust" /></label>
+            <label class="block"><span class="text-xs font-semibold tracking-wide text-stone">Phone</span><input type="tel" name="phone" class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust" /></label>
           </div>
-          <label class="block mt-5"><span class="text-xs font-semibold tracking-wide text-stone">Email</span><input type="email" required class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust" /></label>
+          <label class="block mt-5"><span class="text-xs font-semibold tracking-wide text-stone">Email</span><input type="email" name="email" required class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust" /></label>
           <label class="block mt-5"><span class="text-xs font-semibold tracking-wide text-stone">What are you planning?</span>
-            <select class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust">
+            <select name="project_type" class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust">
               <option>Renovation or alteration</option><option>New build</option><option>Preliminary costing</option><option>Something else</option>
             </select>
           </label>
-          <label class="block mt-5"><span class="text-xs font-semibold tracking-wide text-stone">Tell us more</span><textarea rows="4" class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust"></textarea></label>
+          <label class="block mt-5"><span class="text-xs font-semibold tracking-wide text-stone">Tell us more</span><textarea name="message" rows="4" class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust"></textarea></label>
           <button type="submit" class="mt-6 w-full rounded-full bg-rust px-7 py-4 text-sm font-semibold text-cream tracking-wide transition-all hover:bg-rustdark">Send enquiry</button>
           <p id="form-done" class="hidden mt-4 text-center text-sm text-rustdark font-medium">Thanks. We will be in touch shortly.</p>
+          <p id="form-error" class="hidden mt-4 text-center text-sm text-rustdark font-medium">Sorry, that did not send. Please try again, or call <a href="tel:0210566250" data-cms-tel="contact.phone" class="underline" data-wt="contact.phone">021 056 6250</a> or email <a href="mailto:info@centralresidential.co.nz" data-cms-mailto="contact.email" class="underline" data-wt="contact.email">info@centralresidential.co.nz</a>.</p>
         </form>
+        <script>
+          // Sends the enquiry straight to the WebTag dashboard intake (CORS open, no token).
+          (function () {
+            var form = document.getElementById('enquiry-form');
+            var btn = form.querySelector('button[type="submit"]');
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var data = Object.fromEntries(new FormData(form));
+              if (data.website) { form.reset(); document.getElementById('form-done').classList.remove('hidden'); return; }
+              delete data.website;
+              document.getElementById('form-error').classList.add('hidden');
+              btn.disabled = true; btn.textContent = 'Sending...';
+              fetch('https://webtag-live.vercel.app/api/forms/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ site_id: 'c083d7a4-049e-4c34-9d18-420eb6a4f304', form_name: 'contact', page_slug: 'contact', data: data, source_url: location.href })
+              }).then(function (r) {
+                if (!r.ok) throw new Error();
+                form.reset();
+                document.getElementById('form-done').classList.remove('hidden');
+              }).catch(function () {
+                document.getElementById('form-error').classList.remove('hidden');
+              }).finally(function () { btn.disabled = false; btn.textContent = 'Send enquiry'; });
+            });
+          })();
+        </script>
       </div>
     </div>
   </section>
