@@ -25,6 +25,8 @@
     @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
     .nav-link { position: relative; } .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: currentColor; transition: width .35s ease; } .nav-link:hover::after { width: 100%; }
   </style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<style>/* Turnstile stays out of the layout unless a visitor has to interact */ .cf-turnstile, .cf-turnstile > div, .cf-turnstile > div > div { display: contents; }</style>
 </head>
 
 <body class="font-sans text-ink antialiased selection:bg-rust selection:text-cream">
@@ -97,6 +99,7 @@
             </select>
           </label>
           <label class="block mt-5"><span class="text-xs font-semibold tracking-wide text-stone">Tell us more</span><textarea name="message" rows="4" class="mt-2 w-full rounded-lg border border-concrete bg-cream/40 px-4 py-3 text-sm focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust"></textarea></label>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAADueXkvPFQRzJgxw" data-appearance="interaction-only" data-size="flexible" data-refresh-expired="auto"></div>
           <button type="submit" class="mt-6 w-full rounded-full bg-rust px-7 py-4 text-sm font-semibold text-cream tracking-wide transition-all hover:bg-rustdark">Send enquiry</button>
           <p id="form-done" class="hidden mt-4 text-center text-sm text-rustdark font-medium">Thanks. We will be in touch shortly.</p>
           <p id="form-error" class="hidden mt-4 text-center text-sm text-rustdark font-medium">Sorry, that did not send. Please try again, or call <a href="tel:0210566250" data-cms-tel="contact.phone" class="underline" data-wt="contact.phone">021 056 6250</a> or email <a href="mailto:info@centralresidential.co.nz" data-cms-mailto="contact.email" class="underline" data-wt="contact.email">info@centralresidential.co.nz</a>.</p>
@@ -106,24 +109,38 @@
           (function () {
             var form = document.getElementById('enquiry-form');
             var btn = form.querySelector('button[type="submit"]');
+            // Cloudflare Turnstile: a token lasts 300s and works once, so it is read at send time and
+            // renewed if missing or stale. Never blocks: no token within ~5s and the enquiry goes without.
+            function turnstileToken() {
+              var ts = window.turnstile, w = form.querySelector('.cf-turnstile');
+              var get = function () { try { return ts.getResponse(w) || ''; } catch (_) { return ''; } };
+              return new Promise(function (res) {
+                if (!ts || !w) return res('');
+                try { if (!get() || ts.isExpired(w)) ts.reset(w); } catch (_) {}
+                var n = 0; (function poll() { var t = get(); if (t || ++n > 25) return res(t); setTimeout(poll, 200); })();
+              });
+            }
+            // After every send, so a second enquiry gets a fresh token.
+            function resetTurnstile() { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch (_) {} }
             form.addEventListener('submit', function (e) {
               e.preventDefault();
               var data = Object.fromEntries(new FormData(form));
               if (data.website) { form.reset(); document.getElementById('form-done').classList.remove('hidden'); return; }
               delete data.website;
+              delete data['cf-turnstile-response']; // sent as turnstile_token, read fresh at send time
               document.getElementById('form-error').classList.add('hidden');
               btn.disabled = true; btn.textContent = 'Sending...';
-              fetch('https://webtag-live.vercel.app/api/forms/submit', {
+              turnstileToken().then(function (turnstile) { return fetch('https://webtag-live.vercel.app/api/forms/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ site_id: 'c083d7a4-049e-4c34-9d18-420eb6a4f304', form_name: 'contact', page_slug: 'contact', data: data, source_url: location.href })
-              }).then(function (r) {
+                body: JSON.stringify({ site_id: 'c083d7a4-049e-4c34-9d18-420eb6a4f304', form_name: 'contact', page_slug: 'contact', data: data, source_url: location.href, turnstile_token: turnstile || undefined })
+              }); }).then(function (r) {
                 if (!r.ok) throw new Error();
                 form.reset();
                 document.getElementById('form-done').classList.remove('hidden');
               }).catch(function () {
                 document.getElementById('form-error').classList.remove('hidden');
-              }).finally(function () { btn.disabled = false; btn.textContent = 'Send enquiry'; });
+              }).finally(function () { btn.disabled = false; btn.textContent = 'Send enquiry'; resetTurnstile(); });
             });
           })();
         </script>
