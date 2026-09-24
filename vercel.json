@@ -8,6 +8,10 @@
         {
           "key": "Content-Security-Policy",
           "value": "frame-ancestors 'self' https://webtag-live.vercel.app https://os.webtag.co.nz http://localhost:3020 http://localhost:3000"
+        },
+        {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https://media.webtag.co.nz; media-src 'self' blob:; connect-src 'self'; frame-src 'self'; frame-ancestors 'self' https://webtag-live.vercel.app https://os.webtag.co.nz https://webtag-live-webtagosd.vercel.app; form-action 'self'; base-uri 'self'; object-src 'none'; report-uri https://os.webtag.co.nz/api/csp-report"
         }
       ]
     }
