@@ -2,7 +2,7 @@
 // dashboard Publish (which commits content.json) ships on the next Vercel build. The .html
 // files keep their literal copy, so they still work opened raw.
 // Based on kiwiquote/scripts/build.mjs, extended to every *.html page in the repo root.
-import { readFileSync, writeFileSync, rmSync, mkdirSync, cpSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, rmSync, mkdirSync, cpSync, readdirSync, existsSync } from "node:fs";
 import { parseHTML } from "linkedom";
 
 const root = new URL("../", import.meta.url);
@@ -93,5 +93,8 @@ rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist);
 cpSync(new URL("assets/", root), new URL("assets/", dist), { recursive: true });
 cpSync(new URL("editor-bridge.js", root), new URL("editor-bridge.js", dist));
+// robots.txt is served from the site root, so it has to be copied like any other asset.
+// Without this the file sits in the repo and 404s on the live site.
+if (existsSync(new URL("robots.txt", root))) cpSync(new URL("robots.txt", root), new URL("robots.txt", dist));
 for (const file of pages) writeFileSync(new URL(file, dist), renderPage(file));
 console.log(`built ${pages.length} pages into dist/: ${pages.join(", ")}`);
